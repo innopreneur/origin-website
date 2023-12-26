@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && cp dev/.env .env",
     "start": "per-env",
     "start:development": "NODE_ENV=development ETHEREUM_RPC_PROVIDER=http://localhost:8545 next dev",
     "start:production": "NODE_ENV=production next start -p $PORT",
