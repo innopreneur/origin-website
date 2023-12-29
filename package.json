@@ -9,12 +9,12 @@
   "author": "Origin Protocol",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && cp dev/.env .env",
+    "dev": "node_modules/.bin/next dev",
+    "build": "node_modules/.bin/next build && cp dev/.env .env",
     "start": "per-env",
-    "start:development": "NODE_ENV=development ETHEREUM_RPC_PROVIDER=http://localhost:8545 next dev",
-    "start:production": "NODE_ENV=production next start -p $PORT",
-    "lint": "next lint"
+    "start:development": "NODE_ENV=development ETHEREUM_RPC_PROVIDER=http://localhost:8545 node_modules/.bin/next dev",
+    "start:production": "NODE_ENV=production node_modules/.bin/next start -p $PORT",
+    "lint": "node_modules/.bin/next lint"
   },
   "dependencies": {
     "@fontsource/lato": "^4.5.10",
